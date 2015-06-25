@@ -187,7 +187,7 @@ class ChronosDaemon {
 		}
 
 		// Execute actions in sub-processes.
-		$exec = dirname(dirname(dirname(__FILE__))) . "/framework/sake";
+		$exec = "php " . dirname(dirname(dirname(__FILE__))) . "/framework/cli-script.php";
 		$log = dirname($this->params['temp']) . "/chronos_subprocess.log";
 		foreach ($forExecution as $file => $c) {
 			switch ($c->actionType) {
